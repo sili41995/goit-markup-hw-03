@@ -18,9 +18,39 @@
   --header-secondary-logo-color: #4d5ae5;
 }
 
+/* ========СБРОС=СТИЛЕЙ======== */
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* =======СБРОС=СТИЛЕЙ=END======= */
+
 .list {
   /* убирает точки для списков */
   list-style: none;
+  display: flex;
+  /* надо ли align-items: center???? */
+  align-items: center;
 }
 
 .link {
@@ -47,11 +77,35 @@ body {
   color: var(--primary-text-color);
 }
 
+.container {
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* ==========HEADER========== */
 .header {
   background: var(--other-background-color);
   border-bottom: 1px solid;
-  border-bottom: var(--border-color);
+  border-bottom-color: var(--border-color);
+}
+
+.page-header-container {
+  display: flex;
+  /* надо ли align-items: center???? */
+  align-items: center;
+  justify-content: space-between;
+  /* или же можно использовать margin-left: auto; */
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.nav {
+  display: flex;
+  /* надо ли align-items: center???? */
+  align-items: center;
 }
 
 .logo {
@@ -62,10 +116,15 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--header-primary-logo-color);
+  margin-right: 76px;
 }
 
 .logo > span {
   color: var(--header-secondary-logo-color);
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .menu-link {
@@ -82,6 +141,10 @@ body {
   font-style: normal;
 }
 
+.list-adress {
+  display: flex;
+}
+
 .adress-email {
   color: var(--secondary-text-color);
 }
@@ -93,6 +156,8 @@ body {
 
 .adress-phone {
   color: var(--secondary-text-color);
+  margin-left: 40px;
+  margin-right: 0;
 }
 
 .adress-phone:hover,
@@ -103,8 +168,15 @@ body {
 
 /* ==========MAIN========== */
 
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .section-hero {
   background-color: var(--primary-background-color);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .main-title {
@@ -113,10 +185,17 @@ body {
   line-height: 1.07;
   text-align: center;
   color: var(--hero-text-color);
+  width: 496px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-modal-btn {
+  display: block;
   padding: 16px 32px;
+  margin-right: auto;
+  margin-left: auto;
   background: var(--button-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -125,7 +204,6 @@ body {
   font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--other-button-color-text);
-  cursor: pointer;
 }
 
 .hero-modal-btn:hover,
@@ -133,11 +211,21 @@ body {
   background: var(--primary-accent-color);
 }
 
+.feature {
+  /* flex-wrap: wrap; */
+  gap: 24px;
+}
+
+.feature-list {
+  width: 264px;
+}
+
 .subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   color: var(--primary-text-color);
+  margin-bottom: 8px;
 }
 
 .text-description {
@@ -180,7 +268,6 @@ body {
   text-align: center;
   letter-spacing: 0.04em;
   color: var(--button-color-text);
-  cursor: pointer;
 }
 
 .filter-btn:hover,
