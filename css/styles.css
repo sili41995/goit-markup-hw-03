@@ -174,9 +174,17 @@ body {
 }
 
 .section-hero {
-  background-color: var(--primary-background-color);
+  /* для скции hero */
   padding-top: 188px;
   padding-bottom: 188px;
+}
+
+.section-feature {
+  padding-bottom: 0;
+}
+
+.section-hero {
+  background-color: var(--primary-background-color);
 }
 
 .main-title {
@@ -212,7 +220,7 @@ body {
 }
 
 .feature {
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -237,10 +245,38 @@ body {
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.what-are-we-doing-list {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.what-are-we-doing-list-img {
+  flex-basis: calc((100% - 48px) / 3);
 }
 
 .section-our-team {
   background-color: var(--secondary-background-color);
+}
+
+.team-list {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.team-list-card {
+  flex-basis: calc((100% - 72px) / 4);
+}
+
+.card-suptitle {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: var(--other-background-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .card-suptitle-name {
@@ -248,11 +284,33 @@ body {
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .card-job-title {
   text-align: center;
   color: var(--secondary-text-color);
+}
+
+.section-projects {
+  padding-top: 96px;
+}
+
+.filter-list {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.filter-list-btn {
+  display: inline;
+}
+
+.filter-list-btn:first-child {
+  margin-left: auto;
+}
+
+.filter-list-btn:last-child {
+  margin-right: auto;
 }
 
 .filter-btn {
@@ -280,12 +338,37 @@ body {
   color: var(--secondary-accent-color);
 }
 
+.project-card-list {
+  align-items: flex-start;
+  margin-top: 72px;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.project-card {
+  flex-basis: calc((100% - 72px) / 4);
+  background: var(--other-background-color);
+  border: 1px solid var(--border-color);
+}
+
+.project-subtitle {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+}
+
 /* ==========MAIN=END========== */
 
 /* ==========FOOTER========== */
 
 .footer {
   background: var(--primary-background-color);
+}
+
+.footer-container {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-logo {
@@ -305,6 +388,8 @@ body {
 
 .footer-text {
   color: var(--other-text-color);
+  width: 264px;
+  margin-top: 16px;
 }
 
 /* ==========FOOTER=END========== */
